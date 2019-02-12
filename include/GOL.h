@@ -41,10 +41,10 @@ class GOL : public I_GameState
                         // I had few problems with float, it was possible that float numbers
                         // where smaller than the actual Number and it got rounded down
                         //
-                        // i did not wanted to use two indices to track the position
-                        // so i needed to define a integer X which tracks the Pos
-                        // x is Calculated whit module grid_Size.x
-                        // and y is Calculated via division
+                        // i did not wanted to use two indices to track the Position
+                        // so i needed to define a integer X,
+                        // x for the index is Calculated via modulo grid_Size.x
+                        // and y is Calculated via division grid_Size.x
                         if( gol_grid.Is_QuadAlivePerIndex( X% gol_grid.Get_Grid().x + i, (int)(X/ gol_grid.Get_Grid().x) + j ) ){
                             alive_Neighbors += 1;
                         }// EndIf
