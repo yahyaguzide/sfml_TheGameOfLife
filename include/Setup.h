@@ -42,7 +42,9 @@ class Setup : public I_GameState
                     // Return a GOL Object
                     // this Starts the Game
                     return new GOL();
-                }// EndIf
+                }else if( event.key.code == sf::Keyboard::C ){
+                    gol_grid.Clear_Grid();
+                }// EndElseIf
             }// EndElseIf
 
             return this;

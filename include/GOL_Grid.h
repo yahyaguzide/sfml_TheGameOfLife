@@ -1,6 +1,7 @@
 #ifndef GOL_GRID_H
 #define GOL_GRID_H
 
+#include <iterator>
 #include <vector>
 
 #include <SFML/System/Vector2.hpp>
@@ -210,6 +211,15 @@ class GOL_Grid
                 }// EndIf
             }// EndIf
             return false;
+        };
+
+        ///////////////////////////////////////////
+        /// \brief Sets all GOLQuads alive to false,
+        /// \brief all Quads get colored Black
+        void Clear_Grid(){
+            for( auto it = golquad_vec.begin(); it != golquad_vec.end(); it++ ){
+                (*it).Set_Alive( false );
+            }
         };
 
     private:

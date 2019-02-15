@@ -42,7 +42,7 @@ int main()
         }// endWhile
 
         // Update the Game
-        (*state.top()).Update( gol_grid );
+        state.top()->Update( gol_grid );
 
         window.clear();
         for( auto it = gol_grid.Get_GolVec().begin(); it != gol_grid.Get_GolVec().end(); it++ ){
